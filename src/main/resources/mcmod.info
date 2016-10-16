@@ -1,0 +1,13 @@
+[
+{
+  "modid": "mpfileoutputter",
+  "name": "MPFileOutputter",
+  "description": "It outputs the items that have been added by the Mod as the configuration file of MCEconomy3Compact.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Putcho"],
+  "credits": "Putcho","MincraftForge"
+}
+]
