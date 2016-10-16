@@ -76,25 +76,25 @@ public class MPFileOutputter {
 					}
 				}
 
-				output(sb, mod.getName());
+				output(sb, modid);
 			}
 		}
 	}
 
-	private void output(StringBuilder sb, String modname){
+	private void output(StringBuilder sb, String modid){
 		try{
-			File mpfile = new File(Minecraft.getMinecraft().mcDataDir, String.format("mods/%s.mp", modname));
+			File mpfile = new File(Minecraft.getMinecraft().mcDataDir, String.format("mods/%s.mp", modid));
 			mpfile.createNewFile();
 			FileOutputStream fos = new FileOutputStream(mpfile);
 			PrintWriter pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(fos, "UTF-8")));
 			pw.write(sb.toString());
 			pw.close();
 			fos.close();
-			
-			System.out.println(String.format("[MPFileOutputter]Output success of %s", modname));
+
+			System.out.println(String.format("[MPFileOutputter]Output success of %s", modid));
 		}catch(Exception e){
 			e.printStackTrace();
-			System.out.println(String.format("[MPFileOutputter]Output error of %s", modname));
+			System.out.println(String.format("[MPFileOutputter]Output error of %s", modid));
 		}
 	}
 }
